@@ -27,4 +27,28 @@ binario: bin/binario
 
 bin/binario: src/binario.cpp
 	c++ $< -o $@ -I$(INCLUDE)
-	
+
+std: bin/std
+	./$<
+
+bin/std: src/std.cpp
+	c++ $< -o $@ -I$(INCLUDE)
+
+vector: bin/vector
+	./$<
+
+bin/vector: src/vector.cpp
+	c++ $< -o $@ -I$(INCLUDE)
+
+map: bin/map
+	./$<
+
+bin/map: src/map.cpp
+	c++ $< -o $@ -I$(INCLUDE)
+
+set: bin/set
+	./$<
+
+bin/set: src/set.cpp
+	c++ $< -o $@ -I$(INCLUDE)
+
